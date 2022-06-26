@@ -12,7 +12,6 @@ const AdviceCard = styled(Box)({
   alignItems:"center",
   justifyContent:'center',
   position:"relative !important",
-  boxShadow:"0 2px 5px 1px hsl(218, 23%, 16%)"
 })
 
 const CustomText = styled(Typography)((props)=>({
@@ -67,13 +66,12 @@ export const Card = () => {
     }}}>
       <CustomText variant="body2" fontSize="12px" textTransform="uppercase" color="hsl(150, 100%, 66%)" letterSpacing="true"> Advice # {advice.slip.id}</CustomText>
       <CustomText variant="body2" fontSize="28px"> "{advice.slip.advice}"</CustomText>
-      <div style={{ height:"3rem", width:"100%"}}>
+      <div style={{ height:"3.4rem", width:"100%"}}>
         <img style={{width:'100%'}} alt=""  src="advice-generator-app-main/images/pattern-divider-mobile.svg" />
       </div>
       <DiceContainer onClick={fetchAdvice}>
         <img style={{ hieght:'14px !important', width:'40px !important'}} alt="" src="advice-generator-app-main/images/icon-dice.svg" />
       </DiceContainer>
-      
     </AdviceCard>
   )
 }

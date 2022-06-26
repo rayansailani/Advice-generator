@@ -19,7 +19,7 @@ const CardContainer = styled(Container)({
   justifyContent:"center",
   minWidth:'100vw !important',
   minHeight:"100vh !important",
-  background:'hsl(217, 19%, 38%)',
+  background:'hsl(218, 23%, 16%)',
 })
 
 export const App = () => {
