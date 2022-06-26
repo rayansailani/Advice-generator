@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { Container } from '@mui/system';
+import React from 'react';
+import { Card } from './Components/Card';
+import "./index.css"
+import { styled } from '@mui/system';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "Manrope",
+  },
+});
+
+const CardContainer = styled(Container)({
+  display:"flex",
+  flexDirection:'column',
+  alignItems:"center",
+  justifyContent:"center",
+  minWidth:'100vw !important',
+  minHeight:"100vh !important",
+  background:'hsl(217, 19%, 38%)',
+})
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <ThemeProvider theme={theme}>
+        <CardContainer maxWidth="lg" disableGutters>
+          <Card/>
+        </CardContainer>
+      </ThemeProvider>
+  )
 }
-
-export default App;
